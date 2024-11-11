@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+
+
+body {
+    font-family: "Sour Gummy", serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+
+    h1 {
+        font-size: 2rem;
+        color: #f39c12;
+        text-shadow: 2px 2px 5px #000;
+    }
+
+    .filters ol {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    .filters li {
+        cursor: pointer;
+        padding: 8px 15px;
+        border-radius: 20px;
+        background-color: #333;
+        color: #f5f5f5;
+        transition: transform 0.2s, background-color 0.2s;
+    }
+    
+    .filters li:hover {
+        transform: scale(1.1);
+        background-color: #f39c12;
+    }
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    animation: fadeIn 1.2s ease-in-out;
+    width: 90%;
+
+    .jokes-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1000px;
+        width: 90%;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #1e1e1e;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        margin-bottom: 20px;
+        min-height: 250px;
+
+        h3 {
+            color: #f39c12;
+            margin-bottom: 2rem;
+        }
+        h4 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            color: #ddd;
+            transition: transform 0.2s;
+        }
+    }
+}
+
+#refresh {
+    background-color: #f39c12;
+    border: none;
+    color: #121212;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(243, 156, 18, 0.4);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+#refresh:hover {
+    background-color: #f39c12d1;
+    transform: scale(1.1);
+}
+
+.loading {
+    font-size: 1.5rem;
+    color: #f39c12;
+    animation: pulse 1.2s infinite;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 1;
+    }
+}
