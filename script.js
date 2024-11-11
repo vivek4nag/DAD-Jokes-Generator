@@ -41,7 +41,7 @@ async function fetchJokes() {
         renderLoadingMsg()
         let response = await fetch(`${JOKES_API}${genre}${JOKES_FILTER}`)
         let data = await response.json()
-        console.log(data);
+        // console.log(data);
         renderOnUI(data)
     }catch(error){
     console.error();
@@ -57,7 +57,7 @@ refresh.addEventListener("click", ()=>{
 })
 
 filterBtns.forEach((btn) =>{
-    console.log(btn.id);
+    // console.log(btn.id);
     btn.addEventListener("click", () => {
         genre = btn.id;
         jokesContainer.innerHTML = ""
